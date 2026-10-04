@@ -49,10 +49,16 @@
             object-fit: cover;
             border: 2px solid #38bdf8;
         }
-        .brand-info h1 {
+        .brand-text h1 {
             font-size: 19px;
             color: #f8fafc;
             font-weight: 600;
+        }
+        .developer-credit {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-top: 2px;
+            letter-spacing: 0.5px;
         }
         /* Iframe Container */
         .iframe-container {
@@ -60,35 +66,14 @@
             width: 100%;
             background: #121212;
             position: relative;
+            overflow: hidden;
         }
         iframe {
             width: 100%;
-            height: 100%;
+            height: calc(100% + 65px);
+            margin-top: -65px;
             border: none;
             display: block;
-        }
-        /* Studybee logo ko hide karne ke liye black cover strip - matched exact dark background */
-        .black-cover-strip {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 75px;
-            background-color: #121212;
-            z-index: 50;
-            pointer-events: none;
-        }
-        /* Footer Branding */
-        .footer-credit {
-            background: #090d16;
-            color: #94a3b8;
-            text-align: center;
-            padding: 8px;
-            font-size: 12px;
-            border-top: 1px solid #1e293b;
-            min-height: 35px;
-            flex-shrink: 0;
-            z-index: 100;
         }
 
         /* Popup Styles */
@@ -212,20 +197,17 @@
         <header class="top-header">
             <div class="brand-info">
                 <img src="https://i.postimg.cc/2yf3sPqb/IMG-20260731-232914-129.jpg" alt="Logo">
-                <h1>Sachin Academy</h1>
+                <div class="brand-text">
+                    <h1>Sachin Academy</h1>
+                    <div class="developer-credit">Developer By MedxrohitBihar</div>
+                </div>
             </div>
         </header>
 
         <!-- Main Proxy Website Area -->
         <div class="iframe-container">
-            <div class="black-cover-strip"></div>
             <iframe src="https://sachin.studybeepro.site" allowfullscreen></iframe>
         </div>
-
-        <!-- Footer Developer Credit -->
-        <footer class="footer-credit">
-            Developer By MedxrohitBihar 2026
-        </footer>
     </div>
 
     <script>
